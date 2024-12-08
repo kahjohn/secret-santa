@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 def get_name(code):
-    file_url = 'https://github.com/kahjohn/secret-santa/blob/main/santa.csv'
+    file_url = 'https://raw.githubusercontent.com/kahjohn/secret-santa/refs/heads/main/santa.csv'
     output = pd.read_csv(file_url)
     # print(output)
     recepient = output[ output['Code'] == code ]['Recipient'].to_numpy()[0]
