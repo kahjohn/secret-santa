@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 
 def get_name(code):
-    output = pd.read_csv('/workspaces/secret-santa/santa.csv')
+    file_url = 'https://github.com/kahjohn/secret-santa/blob/main/santa.csv'
+    output = pd.read_csv(file_url)
     # print(output)
     recepient = output[ output['Code'] == code ]['Recipient'].to_numpy()[0]
     # print(recepient)
@@ -13,7 +14,9 @@ def get_name(code):
 #     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
 # )
 
-st.image('/workspaces/secret-santa/santa.png')
+image_url = 'https://github.com/kahjohn/secret-santa/blob/main/santa.png?raw=true'
+
+st.image(image_url)
 st.title("Secret Santa")
 st.subheader("Find out who you need to buy the gift for.")
 
