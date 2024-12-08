@@ -18,7 +18,7 @@ image_url = 'https://github.com/kahjohn/secret-santa/blob/main/santa.png?raw=tru
 
 st.image(image_url)
 st.title("Secret Santa")
-st.subheader("Find out who you need to buy the gift for.")
+st.subheader("Let's find out who you need to buy the gift for :)")
 
 # Get the user's input
 user_input = st.text_input("Key in your special code: ")
