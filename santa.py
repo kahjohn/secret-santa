@@ -13,7 +13,7 @@ def get_list(file):
 
 def get_special_code(final_list):
 
-    random.seed(42)
+    random.seed(1234)
     special_code = []
 
     # Generate a random 5-digit number
@@ -35,7 +35,7 @@ def get_secret_santa(participants):
     results = ""
     results_raw = []
 
-    np.random.seed(3690)
+    np.random.seed(6666)
     r = np.random.choice(to_pickup)
     print("picked-up first: " + participants[r] + '(' + str(r) + ')' + '\n')
     to_pickup = np.delete(to_pickup, np.where(to_pickup == r))
@@ -65,7 +65,7 @@ def get_secret_santa(participants):
 
     return results_raw
 
-participant_list = ['KJ','KW','JN','JL']
+participant_list = ['L Y CHING','L W NIE','N S HWA','C W ZHE','L K WHY','L S LING','C H YAN','C C CHONG','L Y LENG','L Y LEE','L J SHENG','L K JOHN','L Y MOOI','L J NIE','L Y YEN']
 
 lst = get_list(participant_list)
 # print(lst)

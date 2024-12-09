@@ -4,21 +4,24 @@ import pandas as pd
 def get_name(code):
     file_url = 'https://raw.githubusercontent.com/kahjohn/secret-santa/refs/heads/main/santa.csv'
     output = pd.read_csv(file_url)
-    # print(output)
+
     recepient = output[ output['Code'] == code ]['Recipient'].to_numpy()[0]
+ 
+    text1 = 'Congratz, you are going to buy a Christmas gift for ' + recepient
+    text2 = '恭喜，您将会送一份圣诞礼物给 ' + recepient
+
+    text_ = text1 + '\n' + text2
+    st.text(text_)
+
     # print(recepient)
-    return 'Congratz, you are going to buy a Christmas gift for ' + recepient
+    # return 'Congratz, you are going to buy a Christmas gift for ' + recepient
+    return '🎄🎅🎄🎅🎄🎅🎄🎅🎄🎅🎄🎅🎄🎅🎄🎅🎄🎅🎄🎅🎄🎅🎄🎅🎄'
 
-# st.title("My new app")
-# st.write(
-#     "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-# )
-
-image_url = 'https://github.com/kahjohn/secret-santa/blob/main/santa.png?raw=true'
+image_url = 'https://raw.githubusercontent.com/kahjohn/secret-santa/refs/heads/main/santa.png'
 
 st.image(image_url)
 st.title("Secret Santa")
-st.subheader("Let's find out who you need to buy the gift for :)")
+st.subheader("Let's find out who you need to buy a gift for :)")
 
 # Get the user's input
 user_input = st.text_input("Key in your special code: ")
